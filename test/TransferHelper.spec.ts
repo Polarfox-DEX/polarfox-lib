@@ -83,15 +83,15 @@ describe('TransferHelper', () => {
     })
   })
 
-  describe('#safeTransferETH', () => {
+  describe('#safeTransferAVAX', () => {
     it('succeeds call not reverted', async () => {
       await fakeFallback.setup(false)
-      await transferHelper.safeTransferETH(fakeFallback.address, 0)
+      await transferHelper.safeTransferAVAX(fakeFallback.address, 0)
     })
     it('fails if call reverts', async () => {
       await fakeFallback.setup(true)
-      await expect(transferHelper.safeTransferETH(fakeFallback.address, 0)).to.be.revertedWith(
-        'TransferHelper::safeTransferETH: ETH transfer failed'
+      await expect(transferHelper.safeTransferAVAX(fakeFallback.address, 0)).to.be.revertedWith(
+        'TransferHelper::safeTransferAVAX: AVAX transfer failed'
       )
     })
   })
