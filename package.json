@@ -1,6 +1,6 @@
 {
   "name": "@polarfox/lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "📖 Solidity libraries that are shared across Polarfox contracts. Adapted from Uniswap.",
   "files": [
     "contracts",
